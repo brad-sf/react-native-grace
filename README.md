@@ -54,8 +54,8 @@ import {
 
 ### Layout
 ```flow js
-import {spacing} from 'react-native-grace/layout';
+import {layout} from 'react-native-grace/layout';
 
-const padding = spacing.xs;
+const padding = layout.mb.md;
 
 ```

@@ -23,7 +23,7 @@ export const opacity = {
 /**
  * COLORS
  */
-export const colors = {
+export const color = {
 	white: 'hsla(0, 0%, 100%, 1)',
 	gray100: 'hsla(0, 0%, 90%, 1)',
 	gray200: 'hsla(0, 0%, 80%, 1)',

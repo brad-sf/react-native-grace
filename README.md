@@ -54,9 +54,11 @@ import {
 
 ### Layout
 ```flow js
-import {layout} from 'react-native-grace/layout';
+import {layout, GridWrapper} from 'react-native-grace/layout';
 
 const padding = layout.mb.md;
+
+<GridWrapper>...</GridWrapper>
 
 ```
 

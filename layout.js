@@ -1,4 +1,7 @@
 // @flow
+import {View} from 'react-native';
+
+type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl';
 
 const gridUnit = 25;
 
@@ -29,6 +32,22 @@ export const layout = {
 		xl: {marginBottom: margins.xl},
 		xxl: {marginBottom: margins.xxl},
 	},
+	ml: {
+		xs: {marginLeft: margins.xs},
+		sm: {marginLeft: margins.sm},
+		md: {marginLeft: margins.md},
+		lg: {marginLeft: margins.lg},
+		xl: {marginLeft: margins.xl},
+		xxl: {marginLeft: margins.xxl},
+	},
+	mr: {
+		xs: {marginRight: margins.xs},
+		sm: {marginRight: gridUnit * 0.75},
+		md: {marginRight: margins.md},
+		lg: {marginRight: margins.lg},
+		xl: {marginRight: margins.xl},
+		xxl: {marginRight: margins.xxl},
+	},
 	my: {
 		xs: {
 			marginTop: margins.xs,
@@ -55,4 +74,51 @@ export const layout = {
 			marginBottom: margins.xxl,
 		},
 	},
+	mx: {
+		xs: {
+			marginLeft: margins.xs,
+			marginRight: margins.xs,
+		},
+		sm: {
+			marginLeft: margins.sm,
+			marginRight: gridUnit * 0.75,
+		},
+		md: {
+			marginLeft: margins.md,
+			marginRight: margins.md,
+		},
+		lg: {
+			marginLeft: margins.lg,
+			marginRight: margins.lg,
+		},
+		xl: {
+			marginLeft: margins.xl,
+			marginRight: margins.xl,
+		},
+		xxl: {
+			marginLeft: margins.xxl,
+			marginRight: margins.xxl,
+		},
+	},
+};
+
+type GridWrapperProps = {
+	children: React$Node,
+	size: Size,
+	style: Object | Array<Object>,
+};
+export const GridWrapper = ({
+	children,
+	size = 'md',
+	style,
+}: GridWrapperProps) => {
+	const gridWrapperStyle = {
+		marginHorizontal: layout.mx[size],
+	};
+	const customStyles = style
+		? Array.isArray(style)
+			? style
+			: [style]
+		: null;
+	return <View style={[gridWrapperStyle, ...customStyles]}>{children}</View>;
 };

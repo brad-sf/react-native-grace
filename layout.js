@@ -1,14 +1,14 @@
 // @flow
 
-const gridUnit = 20;
+const gridUnit = 25;
 
 const margins = {
 	xs: gridUnit * 0.5,
 	sm: gridUnit * 0.75,
 	md: gridUnit,
-	lg: gridUnit * 1.25,
-	xl: gridUnit * 1.5,
-	xxl: gridUnit * 2,
+	lg: gridUnit * 1.5,
+	xl: gridUnit * 2,
+	xxl: gridUnit * 2.5,
 };
 
 export const layout = {

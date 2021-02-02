@@ -19,6 +19,9 @@
   "dependencies": {
     "@react-native-community/async-storage": "^1.12.1"
   },
+  "peerDependencies": {
+    "react-native": ">=0.60.0"
+  },
   "devDependencies": {
     "flow-bin": "^0.143.1"
   }

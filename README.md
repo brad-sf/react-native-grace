@@ -51,3 +51,11 @@ import {
     bpTabletLarge,
 } from 'react-native-grace/responsive';
 ```
+
+### Layout
+```flow js
+import {spacing} from 'react-native-grace/layout';
+
+const padding = spacing.xs;
+
+```

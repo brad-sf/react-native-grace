@@ -62,9 +62,10 @@ const padding = layout.mb.md;
 
 ### Theme
 ```flow js
-import {opacity, fontSize} from 'react-native-grace/theme';
+import {opacity, fontSize, color} from 'react-native-grace/theme';
 
 const opacity = opacity[10];
 const font = fontSize.lg;
+const color = color.white;
 
 ```

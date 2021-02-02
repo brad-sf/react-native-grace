@@ -1,4 +1,5 @@
 // @flow
+import {responsive} from './responsive';
 
 /**
  * OPACITY

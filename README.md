@@ -30,3 +30,24 @@ void set(keys.UUID, '679f4133-d19b-4fbf-9150-7cffa22f26a7');
 await get(keys.UUID); // '679f4133-d19b-4fbf-9150-7cffa22f26a7'
 await remove(keys.UUID);
 ```
+
+### Responsive Utils
+```flow js
+// Method Utils
+import {responsive, getImageHeight} from 'react-native-grace/responsive';
+
+// Check Utils
+import {isPhone, isTablet} from 'react-native-grace/responsive';
+
+// Dimensions
+import {screenWidth, screenHeight} from 'react-native-grace/responsive';
+
+// Breakpoints
+import {
+	bpPhoneSmall,
+    bpPhoneMedium,
+    bpTabletSmall,
+    bpTabletMedium,
+    bpTabletLarge,
+} from 'react-native-grace/responsive';
+```

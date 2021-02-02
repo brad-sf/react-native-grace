@@ -2,11 +2,12 @@
 import React from 'react';
 import {View} from 'react-native';
 
-type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl';
+type Size = 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl';
 
 const gridUnit = 25;
 
 const margins = {
+	xxs: gridUnit * 0.25,
 	xs: gridUnit * 0.5,
 	sm: gridUnit * 0.75,
 	md: gridUnit,
@@ -18,6 +19,7 @@ const margins = {
 
 export const layout = {
 	mt: {
+		xxs: {marginTop: margins.xxs},
 		xs: {marginTop: margins.xs},
 		sm: {marginTop: margins.sm},
 		md: {marginTop: margins.md},
@@ -26,6 +28,7 @@ export const layout = {
 		xxl: {marginTop: margins.xxl},
 	},
 	mb: {
+		xxs: {marginBottom: margins.xxs},
 		xs: {marginBottom: margins.xs},
 		sm: {marginBottom: gridUnit * 0.75},
 		md: {marginBottom: margins.md},
@@ -34,6 +37,7 @@ export const layout = {
 		xxl: {marginBottom: margins.xxl},
 	},
 	ml: {
+		xxs: {marginLeft: margins.xxs},
 		xs: {marginLeft: margins.xs},
 		sm: {marginLeft: margins.sm},
 		md: {marginLeft: margins.md},
@@ -42,6 +46,7 @@ export const layout = {
 		xxl: {marginLeft: margins.xxl},
 	},
 	mr: {
+		xxs: {marginRight: margins.xxs},
 		xs: {marginRight: margins.xs},
 		sm: {marginRight: gridUnit * 0.75},
 		md: {marginRight: margins.md},
@@ -50,6 +55,10 @@ export const layout = {
 		xxl: {marginRight: margins.xxl},
 	},
 	my: {
+		xxs: {
+			marginTop: margins.xxs,
+			marginBottom: margins.xxs,
+		},
 		xs: {
 			marginTop: margins.xs,
 			marginBottom: margins.xs,
@@ -76,6 +85,10 @@ export const layout = {
 		},
 	},
 	mx: {
+		xxs: {
+			marginLeft: margins.xxs,
+			marginRight: margins.xxs,
+		},
 		xs: {
 			marginLeft: margins.xs,
 			marginRight: margins.xs,
@@ -113,9 +126,10 @@ export const GridWrapper = ({
 	size = 'md',
 	style,
 }: GridWrapperProps) => {
-	const gridWrapperStyle = {
-		marginHorizontal: layout.mx[size],
-	};
 	const customStyles = style ? (Array.isArray(style) ? style : [style]) : [];
-	return <View style={[gridWrapperStyle, ...customStyles]}>{children}</View>;
+	return (
+		<View style={[{flex: 1}, layout.mx[size], ...customStyles]}>
+			{children}
+		</View>
+	);
 };

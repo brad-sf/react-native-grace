@@ -1,6 +1,6 @@
 {
   "name": "react-native-grace",
-  "version": "1.6.6",
+  "version": "1.6.7",
   "description": "A toolkit for React Native development",
   "main": "index.js",
   "scripts": {

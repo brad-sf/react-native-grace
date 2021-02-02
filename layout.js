@@ -1,4 +1,5 @@
 // @flow
+import React from 'react';
 import {View} from 'react-native';
 
 type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl' | 'xxxl';

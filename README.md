@@ -59,3 +59,11 @@ import {layout} from 'react-native-grace/layout';
 const padding = layout.mb.md;
 
 ```
+
+### Theme
+```flow js
+import {opacity} from 'react-native-grace/theme';
+
+const opacity = opacity[10];
+
+```

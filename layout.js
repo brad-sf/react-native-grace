@@ -8,7 +8,8 @@ const margins = {
 	md: gridUnit,
 	lg: gridUnit * 1.5,
 	xl: gridUnit * 2,
-	xxl: gridUnit * 2.5,
+	xxl: gridUnit * 3,
+	xxxl: gridUnit * 4,
 };
 
 export const layout = {

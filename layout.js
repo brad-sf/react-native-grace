@@ -30,7 +30,7 @@ export const layout = {
 	mb: {
 		xxs: {marginBottom: margins.xxs},
 		xs: {marginBottom: margins.xs},
-		sm: {marginBottom: gridUnit * 0.75},
+		sm: {marginBottom: margins.md},
 		md: {marginBottom: margins.md},
 		lg: {marginBottom: margins.lg},
 		xl: {marginBottom: margins.xl},
@@ -48,71 +48,29 @@ export const layout = {
 	mr: {
 		xxs: {marginRight: margins.xxs},
 		xs: {marginRight: margins.xs},
-		sm: {marginRight: gridUnit * 0.75},
+		sm: {marginRight: margins.md},
 		md: {marginRight: margins.md},
 		lg: {marginRight: margins.lg},
 		xl: {marginRight: margins.xl},
 		xxl: {marginRight: margins.xxl},
 	},
 	my: {
-		xxs: {
-			marginTop: margins.xxs,
-			marginBottom: margins.xxs,
-		},
-		xs: {
-			marginTop: margins.xs,
-			marginBottom: margins.xs,
-		},
-		sm: {
-			marginTop: margins.sm,
-			marginBottom: gridUnit * 0.75,
-		},
-		md: {
-			marginTop: margins.md,
-			marginBottom: margins.md,
-		},
-		lg: {
-			marginTop: margins.lg,
-			marginBottom: margins.lg,
-		},
-		xl: {
-			marginTop: margins.xl,
-			marginBottom: margins.xl,
-		},
-		xxl: {
-			marginTop: margins.xxl,
-			marginBottom: margins.xxl,
-		},
+		xxs: {marginVertical: margins.xxs},
+		xs: {marginVertical: margins.xs},
+		sm: {marginVertical: margins.sm},
+		md: {marginVertical: margins.md},
+		lg: {marginVertical: margins.lg},
+		xl: {marginVertical: margins.xl},
+		xxl: {marginVertical: margins.xxl},
 	},
 	mx: {
-		xxs: {
-			marginLeft: margins.xxs,
-			marginRight: margins.xxs,
-		},
-		xs: {
-			marginLeft: margins.xs,
-			marginRight: margins.xs,
-		},
-		sm: {
-			marginLeft: margins.sm,
-			marginRight: gridUnit * 0.75,
-		},
-		md: {
-			marginLeft: margins.md,
-			marginRight: margins.md,
-		},
-		lg: {
-			marginLeft: margins.lg,
-			marginRight: margins.lg,
-		},
-		xl: {
-			marginLeft: margins.xl,
-			marginRight: margins.xl,
-		},
-		xxl: {
-			marginLeft: margins.xxl,
-			marginRight: margins.xxl,
-		},
+		xxs: {marginHorizontal: margins.xxs},
+		xs: {marginHorizontal: margins.xs},
+		sm: {marginHorizontal: margins.sm},
+		md: {marginHorizontal: margins.md},
+		lg: {marginHorizontal: margins.lg},
+		xl: {marginHorizontal: margins.xl},
+		xxl: {marginHorizontal: margins.xxl},
 	},
 };
 

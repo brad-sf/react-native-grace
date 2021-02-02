@@ -18,7 +18,9 @@ const log = (line: any) => {
 	if (customLogger && customLogger.log) {
 		customLogger.log(line);
 	} else {
-		defaultLogger.log(line);
+		if (__DEV__) {
+			defaultLogger.log(line);
+		}
 	}
 };
 
@@ -26,7 +28,9 @@ const warn = (message: string) => {
 	if (customLogger && customLogger.warn) {
 		customLogger.warn(message);
 	} else {
-		defaultLogger.warn(message);
+		if (__DEV__) {
+			defaultLogger.warn(message);
+		}
 	}
 };
 
@@ -34,7 +38,9 @@ const error = (e: Error) => {
 	if (customLogger && customLogger.error) {
 		customLogger.error(e);
 	} else {
-		defaultLogger.error(e);
+		if (__DEV__) {
+			defaultLogger.error(e);
+		}
 	}
 };
 

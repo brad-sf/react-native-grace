@@ -9,17 +9,19 @@ A toolkit for React Native development
 ```flow js
 import {configure} from 'react-native-grace';
 
-configure({
-    logger: Object
-});
+configure({});
 ```
 
 ## Usage
 
 ### Logger
 ```flow js
-import logger from 'react-native-grace';
+import logger, {setCustomLogger} from 'react-native-grace';
 
+// Set custom loggers (optional)
+setCustomLogger({error: bugSnag.error});
+
+// Log :)
 logger.log('Any');
 logger.warn('String');
 logger.error(new Error('e!'));

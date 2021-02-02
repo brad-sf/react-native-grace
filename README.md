@@ -4,19 +4,10 @@ A toolkit for React Native development
 ## Installation
 `yarn add react-native-grace`
 
-## Configure
-
-```flow js
-import {configure} from 'react-native-grace';
-
-configure({});
-```
-
 ## Usage
-
 ### Logger
 ```flow js
-import logger, {setCustomLogger} from 'react-native-grace';
+import logger, {setCustomLogger} from 'react-native-grace/logger';
 
 // Set custom loggers (optional)
 setCustomLogger({error: bugSnag.error});
@@ -25,4 +16,17 @@ setCustomLogger({error: bugSnag.error});
 logger.log('Any');
 logger.warn('String');
 logger.error(new Error('e!'));
+```
+
+### Local Storage
+```flow js
+import {set, get, remove} from 'react-native-grace/local-storage';
+
+const keys = {
+	UUID: 'UUID',
+}
+
+void set(keys.UUID, '679f4133-d19b-4fbf-9150-7cffa22f26a7');
+await get(keys.UUID); // '679f4133-d19b-4fbf-9150-7cffa22f26a7'
+await remove(keys.UUID);
 ```

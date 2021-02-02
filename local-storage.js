@@ -22,7 +22,7 @@ export const set = async (key: string, value: mixed): Promise<void> => {
 
 export const get = async (key: string): Promise<mixed> => {
 	try {
-		const value = await AsyncStorage.getItem(key);
+		const value: string | null = await AsyncStorage.getItem(key);
 		return value && value.length ? JSON.parse(value) : null;
 	} catch (e) {
 		logger.error(e);

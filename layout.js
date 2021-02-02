@@ -105,8 +105,8 @@ export const layout = {
 
 type GridWrapperProps = {
 	children: React$Node,
-	size: Size,
-	style: Object | Array<Object>,
+	size?: Size,
+	style?: Object | Array<Object>,
 };
 export const GridWrapper = ({
 	children,
@@ -116,10 +116,6 @@ export const GridWrapper = ({
 	const gridWrapperStyle = {
 		marginHorizontal: layout.mx[size],
 	};
-	const customStyles = style
-		? Array.isArray(style)
-			? style
-			: [style]
-		: null;
+	const customStyles = style ? (Array.isArray(style) ? style : [style]) : [];
 	return <View style={[gridWrapperStyle, ...customStyles]}>{children}</View>;
 };

@@ -72,6 +72,32 @@ export const layout = {
 		xl: {marginHorizontal: margins.xl},
 		xxl: {marginHorizontal: margins.xxl},
 	},
+	flex: {
+		flex: 1,
+	},
+	justify: {
+		start: {justifyContent: 'flex-start'},
+		around: {justifyContent: 'space-around'},
+		between: {justifyContent: 'space-between'},
+		center: {justifyContent: 'center'},
+		evenly: {justifyContent: 'space-evenly'},
+		end: {justifyContent: 'flex-end'},
+	},
+	items: {
+		start: {alignItems: 'flex-start'},
+		center: {alignItems: 'center'},
+		stretch: {alignItems: 'stretch'},
+		baseline: {alignItems: 'baseline'},
+		end: {alignItems: 'flex-end'},
+	},
+	content: {
+		start: {alignContent: 'flex-start'},
+		around: {alignContent: 'space-around'},
+		between: {alignContent: 'space-between'},
+		center: {alignContent: 'center'},
+		evenly: {alignContent: 'space-evenly'},
+		end: {alignContent: 'flex-end'},
+	},
 };
 
 type GridWrapperProps = {

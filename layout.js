@@ -83,6 +83,12 @@ export const layout = {
 		evenly: {justifyContent: 'space-evenly'},
 		end: {justifyContent: 'flex-end'},
 	},
+	direction: {
+		row: {flexDirection: 'row'},
+		rowReverse: {flexDirection: 'row-reverse'},
+		column: {flexDirection: 'column'},
+		columnReverse: {flexDirection: 'column-reverse'},
+	},
 	items: {
 		start: {alignItems: 'flex-start'},
 		center: {alignItems: 'center'},

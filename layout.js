@@ -72,9 +72,7 @@ export const layout = {
 		xl: {marginHorizontal: margins.xl},
 		xxl: {marginHorizontal: margins.xxl},
 	},
-	flex: {
-		flex: 1,
-	},
+	flex: {flex: 1},
 	justify: {
 		start: {justifyContent: 'flex-start'},
 		around: {justifyContent: 'space-around'},
@@ -103,6 +101,10 @@ export const layout = {
 		center: {alignContent: 'center'},
 		evenly: {alignContent: 'space-evenly'},
 		end: {alignContent: 'flex-end'},
+	},
+	debug: {
+		borderWidth: 2,
+		borderColor: 'red',
 	},
 };
 
